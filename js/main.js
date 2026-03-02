@@ -328,4 +328,25 @@
 
   initRoleButtons();
 
+  /* ── SCROLLSPY — active nav link on scroll ─────────── */
+  function initScrollspy() {
+    const sections = [...document.querySelectorAll('#work, #about, #contact')];
+    const navLinks = document.querySelectorAll('.nav__link');
+    if (!sections.length || !navLinks.length) return;
+
+    const update = () => {
+      let active = null;
+      sections.forEach(s => {
+        if (s.getBoundingClientRect().top <= window.innerHeight * 0.4) active = s.id;
+      });
+      navLinks.forEach(l => l.classList.remove('is-active'));
+      if (active) document.querySelector(`.nav__link[href="#${active}"]`)?.classList.add('is-active');
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  }
+
+  initScrollspy();
+
 })();

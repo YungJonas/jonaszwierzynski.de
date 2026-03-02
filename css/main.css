@@ -127,9 +127,12 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   letter-spacing: 0.04em;
   color: var(--c-muted);
   padding: 0.5rem;
-  transition: color 0.15s;
+  border-radius: 6px;
+  transition: color 0.15s, background 0.15s;
+  margin-bottom: 2px;
 }
-.nav__link:hover { color: var(--c-text); }
+.nav__link:hover  { color: var(--c-text); background: var(--c-border); }
+.nav__link.is-active { color: var(--c-text); background: var(--c-border); }
 
 /* Menu toggle — hidden on desktop */
 .nav__toggle {
@@ -270,9 +273,6 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 @keyframes hint-fade { to { opacity: 0; } }
 
-@media (max-width: 768px) {
-  .skills-physics { height: 64svh; padding: 16px; }
-}
 
 /* === ABOUT === */
 .about__grid {
@@ -327,23 +327,16 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   gap: clamp(1rem, 2vw, 1.75rem);
 }
 
-/* Desktop column spans */
-.work-item:nth-child(1) { grid-column: span 7; }
-.work-item:nth-child(2) { grid-column: span 3; }
-.work-item:nth-child(3) { grid-column: span 4; }
-.work-item:nth-child(4) { grid-column: span 6; }
-.work-item:nth-child(5) { grid-column: span 3; }
-.work-item:nth-child(6) { grid-column: span 7; }
+/* Desktop column + row placement */
+.work-item:nth-child(1) { grid-column: 1 / span 10; grid-row: 1; }
+.work-item:nth-child(2) { grid-column: 1 / span 5;  grid-row: 2; }
+.work-item:nth-child(3) { grid-column: 6 / span 5;  grid-row: 2; }
+.work-item:nth-child(4) { grid-column: 1 / span 5;  grid-row: 3; }
+.work-item:nth-child(5) { grid-column: 1 / span 5;  grid-row: 4; }
+.work-item:nth-child(6) { grid-column: 6 / span 5;  grid-row: 4; }
 
 /* Aspect ratios per item */
-.work-item:nth-child(1) .work-card__image,
-.work-item:nth-child(6) .work-card__image { aspect-ratio: 16 / 9; }
-
-.work-item:nth-child(2) .work-card__image,
-.work-item:nth-child(3) .work-card__image,
-.work-item:nth-child(5) .work-card__image { aspect-ratio: 4 / 3; }
-
-.work-item:nth-child(4) .work-card__image { aspect-ratio: 3 / 2; }
+.work-card__image { aspect-ratio: 4 / 3; }
 
 .work-card {
   display: block;
@@ -353,7 +346,7 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   position: relative;
   overflow: hidden;
   background: var(--c-border);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .work-card__image img {
@@ -366,111 +359,30 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 
 .work-card:hover .work-card__image img { transform: scale(1.03); }
 
-.work-card__body {
-  padding-top: 0.25rem;
-}
-
-.work-card__title-wrap {
-  margin-bottom: 0.625rem;
-}
 
 .work-card__name {
   display: block;
   font-size: clamp(1rem, 1.5vw, 1.5rem);
-  font-weight: 400;
+  font-weight: 425;
   letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 .work-card__tagline {
-  display: block;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
-  font-weight: 400;
+  display: none;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 425;
   line-height: 1.2;
   color: var(--c-muted);
 }
 
 .work-card__meta {
   display: block;
-  font-size: 0.625rem;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c-dim);
+  color: var(--c-text);
 }
 
-/* === BROWSER MOCKUP — work card variant === */
-.work-card__browser-wrap {
-  aspect-ratio: 3 / 2;
-  margin-bottom: 1.25rem;
-}
-
-.browser-frame {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 8px 8px 0 0;
-  border: 1px solid var(--c-border);
-  overflow: hidden;
-  background: #111112;
-}
-
-.browser-frame__chrome {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-  padding: 0 0.75rem;
-  height: 28px;
-  background: #1a1a1c;
-  border-bottom: 1px solid var(--c-border);
-}
-
-.browser-frame__dots {
-  display: flex;
-  gap: 5px;
-}
-
-.browser-frame__dots span {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-}
-
-.browser-frame__dots span:nth-child(1) { background: #ff5f57; }
-.browser-frame__dots span:nth-child(2) { background: #febc2e; }
-.browser-frame__dots span:nth-child(3) { background: #28c840; }
-
-.browser-frame__url {
-  flex: 1;
-  max-width: 180px;
-  margin-inline: auto;
-  text-align: center;
-  font-size: 0.5625rem;
-  letter-spacing: 0.02em;
-  color: var(--c-dim);
-  background: var(--c-bg);
-  border-radius: 4px;
-  padding: 0.2rem 0.625rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.browser-frame__viewport {
-  flex: 1;
-  overflow-y: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: default;
-}
-
-.browser-frame__viewport::-webkit-scrollbar { display: none; }
-
-.browser-frame__content {
-  width: 100%;
-  display: block;
-}
 
 /* === FOOTER === */
 .footer {
@@ -574,7 +486,9 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
 [data-delay="300"] { transition-delay: 0.3s; }
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
+
+/* Tablet and below — nav collapses to top bar */
+@media (max-width: 1024px) {
   body { display: block; }
 
   .page-content {
@@ -604,14 +518,19 @@ button { cursor: pointer; background: none; border: none; font-family: inherit; 
   .nav__links  { display: none; }
   .nav__toggle { display: block; }
   #nav-canvas  { display: none; }
+}
 
-  .work-rows { grid-template-columns: repeat(6, 1fr); }
-  .work-item:nth-child(1) { grid-column: span 4; }
-  .work-item:nth-child(2) { grid-column: span 2; }
-  .work-item:nth-child(3) { grid-column: span 3; }
-  .work-item:nth-child(4) { grid-column: span 3; }
-  .work-item:nth-child(5) { grid-column: span 2; }
-  .work-item:nth-child(6) { grid-column: span 4; }
+/* Mobile — compact grid layout */
+@media (max-width: 768px) {
+  .skills-physics { height: 64svh; padding: 16px; }
+
+  .work-rows { grid-template-columns: 1fr; }
+  .work-item:nth-child(1),
+  .work-item:nth-child(2),
+  .work-item:nth-child(3),
+  .work-item:nth-child(4),
+  .work-item:nth-child(5),
+  .work-item:nth-child(6) { grid-column: auto; grid-row: auto; }
   .footer__grid { grid-template-columns: 1fr; }
 }
 
