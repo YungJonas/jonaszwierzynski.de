@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jonas Zwierzynski — Senior UX/UI Designer & Product Manager at DER SPIEGEL, Hamburg. Editorial and digital product design with clarity and craft.">
+  <title>Jonas Zwierzynski · Senior UX/UI Designer</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <canvas id="nav-canvas" aria-hidden="true"></canvas>
+    <a href="/" class="nav__logo">Jonas Zwierzynski</a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="#work"    class="nav__link">Work</a></li>
+      <li><a href="#about"   class="nav__link">About</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+
+    <button class="nav__toggle" id="nav-toggle"
+            aria-expanded="false" aria-controls="nav-mobile">
+      Menu
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile" role="dialog" aria-label="Navigation">
+    <a href="#work"    class="nav__mobile-link">Work</a>
+    <a href="#about"   class="nav__mobile-link">About</a>
+    <a href="#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+
+  <div class="page-content">
+  <main>
+
+    <!-- SKILLS PHYSICS -->
+    <section class="skills-physics" id="skills-physics" aria-label="Skills">
+      <canvas id="skills-canvas" aria-hidden="true"></canvas>
+    </section>
+
+
+    <!-- HERO -->
+    <section class="hero container" aria-labelledby="hero-name">
+      <p class="hero__status" data-animate>Hamburg, Germany</p>
+      <h1 class="hero__name" id="hero-name" data-animate data-delay="100">We're a fearless digital studio with two decades of craft, ranked Europe’s #1 digital studio by the EDAwards agencies league (2021–2025). </h1>
+      <div class="hero__roles" aria-label="Select a discipline" data-animate data-delay="200">
+        <button class="hero__role-btn is-active" data-tagline="Design that thinks. From research to pixels — building interfaces that earn trust at scale.">UI/UX Design</button>
+        <button class="hero__role-btn" data-tagline="Strategy that ships. Bridging design and delivery across products used by tens of thousands.">Product Management</button>
+        <button class="hero__role-btn" data-tagline="Systems that scale. Multi-brand token architecture — four products, fifty contributors, one source of truth.">Design Systems</button>
+        <button class="hero__role-btn" data-tagline="Stories that look right. Where journalistic integrity meets considered visual design.">Editorial Design</button>
+      </div>
+
+      <p class="hero__tagline" data-animate data-delay="300">
+        Design that thinks. From research to pixels — building interfaces that earn trust at scale.
+      </p>
+    </section>
+
+
+    <!-- WORK -->
+    <section class="section" id="work" aria-labelledby="work-heading">
+      <div class="container">
+
+        <div class="work__header">
+          <span class="label" data-animate>Selected Work</span>
+        </div>
+
+        <div class="work-rows">
+
+          <div class="work-item" data-animate>
+            <a href="#" class="work-card">
+              <div class="work-card__image">
+                <img src="images/MS_01.jpg" alt="SPIEGEL Debatte" loading="lazy">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">SPIEGEL Debatte</h3>
+                  <span class="work-card__tagline">52,500+ users · EDPA Award winner</span>
+                </div>
+                <span class="work-card__meta">Web · Product Design · DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-item" data-animate data-delay="100">
+            <a href="projects/fintech-app-redesign.html" class="work-card">
+              <div class="work-card__image">
+                <img src="images/design-system.png" alt="Multi-brand Design System" loading="lazy">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">Multi-brand Design System</h3>
+                  <span class="work-card__tagline">4 products · 50+ contributors</span>
+                </div>
+                <span class="work-card__meta">Systems · Figma Variables · DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-item" data-animate data-delay="200">
+            <a href="#" class="work-card">
+              <div class="work-card__image">
+                <img src="images/pdadvent.png" alt="AI Comment Moderation" loading="lazy">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">AI Comment Moderation</h3>
+                  <span class="work-card__tagline">94.3% acceptance via Google Perspective</span>
+                </div>
+                <span class="work-card__meta">Product · AI Integration · DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-item" data-animate data-delay="300">
+            <a href="#" class="work-card">
+              <div class="work-card__image">
+                <img src="images/stage.abo.spiegel.de.png" alt="SPIEGEL Abo Shop" loading="lazy" onerror="this.style.display='none'">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">SPIEGEL Abo Shop</h3>
+                  <span class="work-card__tagline">From discovery to checkout</span>
+                </div>
+                <span class="work-card__meta">Web · E-Commerce · DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-item" data-animate>
+            <a href="#" class="work-card">
+              <div class="work-card__image">
+                <img src="" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">–</h3>
+                  <span class="work-card__tagline">Coming soon</span>
+                </div>
+                <span class="work-card__meta">DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="work-item" data-animate data-delay="100">
+            <a href="#" class="work-card">
+              <div class="work-card__image">
+                <img src="" alt="" loading="lazy" onerror="this.style.display='none'">
+              </div>
+              <div class="work-card__body">
+                <div class="work-card__title-wrap">
+                  <h3 class="work-card__name">–</h3>
+                  <span class="work-card__tagline">Coming soon</span>
+                </div>
+                <span class="work-card__meta">DER SPIEGEL</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <span class="label" data-animate>About</span>
+
+        <div class="about__grid">
+          <div>
+            <h2 class="about__heading" id="about-heading" data-animate data-delay="100">
+              Design that earns<br>its place
+            </h2>
+
+            <p class="about__text" data-animate data-delay="200">
+              I'm a Senior UX/UI Designer and Product Manager at DER SPIEGEL in Hamburg,
+              with over ten years of experience across enterprise software, freelance brand
+              and product work, and editorial media. I build design systems that scale,
+              and products that people actually use.
+            </p>
+
+            <p class="about__text" data-animate data-delay="200">
+              At SPIEGEL I led the multi-brand design system adopted across four products
+              by 50+ contributors, shipped SPIEGEL Debatte (52,500+ active users, European
+              Digital Publishing Award), and integrated AI-powered comment moderation
+              achieving a 94.3% acceptance rate. Before that: SAP enterprise UX and a
+              four-year stint in freelance digital design.
+            </p>
+
+            <a href="#contact" class="about__contact" data-animate data-delay="300">
+              Get in touch →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER / CONTACT -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Col 1: Identity -->
+        <div class="footer__col">
+          <p class="footer__name">Jonas Zwierzynski</p>
+          <p class="footer__copy">&copy; <span data-year></span></p>
+        </div>
+
+        <!-- Col 2: Nav -->
+        <nav class="footer__col footer__nav" aria-label="Footer navigation">
+          <a href="#work"  class="footer__link">Work</a>
+          <a href="#about" class="footer__link">About</a>
+        </nav>
+
+        <!-- Col 3: Contact -->
+        <div class="footer__col">
+          <span class="label footer__contact-label">Get in touch</span>
+          <a href="mailto:hello@jonaszwierzynski.de" class="footer__email">
+            hello@jonaszwierzynski.de
+          </a>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="#" class="footer__social-link" target="_blank" rel="noopener">Behance</a>
+            <a href="#" class="footer__social-link" target="_blank" rel="noopener">Read.cv</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  </div><!-- /.page-content -->
+
+  <script src="js/matter.min.js"></script>
+  <script src="js/physics.js"></script>
+  <script src="js/nav-canvas.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

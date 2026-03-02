@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Case Study: Redesigning FinVault's onboarding and core experience — a fintech app serving 200k+ users.">
+  <title>Fintech App Redesign — Jonas</title>
+
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/case-study.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <a href="../index.html" class="nav__logo">Jonas Zwierzynski</a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="../index.html#work"    class="nav__link">Work</a></li>
+      <li><a href="../index.html#about"   class="nav__link">About</a></li>
+      <li><a href="../index.html#contact" class="nav__link">Contact</a></li>
+    </ul>
+
+    <button class="nav__toggle" id="nav-toggle"
+            aria-expanded="false" aria-controls="nav-mobile">
+      Menu
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="nav-mobile" role="dialog" aria-label="Navigation">
+    <a href="../index.html#work"    class="nav__mobile-link">Work</a>
+    <a href="../index.html#about"   class="nav__mobile-link">About</a>
+    <a href="../index.html#contact" class="nav__mobile-link">Contact</a>
+  </div>
+
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="cs-header container" data-animate>
+
+      <a href="../index.html" class="back-link">← Back to work</a>
+
+      <span class="label">Fintech · 2024</span>
+
+      <h1 class="cs-title">Redesigning Personal Finance</h1>
+
+      <dl class="cs-meta">
+        <div>
+          <dt>Client</dt>
+          <dd>FinVault</dd>
+        </div>
+        <div>
+          <dt>Year</dt>
+          <dd>2024</dd>
+        </div>
+        <div>
+          <dt>My Role</dt>
+          <dd>Lead UX Designer</dd>
+        </div>
+        <div>
+          <dt>Deliverables</dt>
+          <dd>Research · UX · UI · Prototype</dd>
+        </div>
+        <div>
+          <dt>Tools</dt>
+          <dd>Figma · Maze · Principle</dd>
+        </div>
+      </dl>
+
+    </header>
+
+
+    <!-- THE CHALLENGE -->
+    <section class="cs-section container" aria-labelledby="cs-challenge">
+
+      <div class="cs-section-label">
+        <span class="label">01 · Challenge</span>
+        <h2 class="cs-section-heading" id="cs-challenge">
+          A product losing users from day one
+        </h2>
+      </div>
+
+      <div class="cs-body" data-animate>
+        <p>
+          FinVault is a personal finance app serving over 200,000 users across Europe.
+          Despite strong core functionality — budgeting, investments, savings goals —
+          the product was bleeding users from day one.
+          <strong>68% of new sign-ups dropped off during onboarding</strong>, and
+          monthly active usage had declined three quarters in a row.
+        </p>
+        <p>
+          I joined as Lead UX Designer on a cross-functional team of eight, working
+          alongside the Head of Product, two engineers, and a data analyst. The brief:
+          understand why users were leaving, then redesign the experience to turn things
+          around.
+        </p>
+        <p>
+          What research revealed wasn't just a UX problem — it was a trust problem.
+          Users were handing over their financial data to an app that felt cluttered,
+          intimidating, and untrustworthy.
+        </p>
+      </div>
+
+      <blockquote class="cs-quote" data-animate>
+        "It felt like I needed a finance degree just to set up my account."
+      </blockquote>
+
+    </section>
+
+
+    <!-- RESEARCH IMAGE -->
+    <!--
+      Add your image at: ../images/cs-fintech-research.jpg
+      Recommended: 2400 × 1350px
+    -->
+    <div class="container" data-animate>
+      <figure class="cs-figure has-placeholder">
+        <img
+          src="../images/cs-fintech-research.jpg"
+          alt="Affinity mapping wall — research synthesis with 24 interview participants"
+          class="ratio-wide"
+          loading="lazy"
+        >
+        <figcaption>Research synthesis — affinity mapping with 24 interview participants</figcaption>
+      </figure>
+    </div>
+
+
+    <!-- RESEARCH -->
+    <section class="cs-section container" aria-labelledby="cs-research">
+
+      <div class="cs-section-label">
+        <span class="label">02 · Research</span>
+        <h2 class="cs-section-heading" id="cs-research">Listening before designing</h2>
+      </div>
+
+      <div class="cs-body" data-animate>
+        <p>
+          I conducted <strong>24 moderated user interviews</strong> across three demographic
+          groups: university students, young professionals (25–35), and pre-retirees (55+).
+          Each session combined task observation with retrospective questioning.
+        </p>
+        <p>
+          In parallel, we ran a <strong>quantitative survey of 340 existing users</strong>
+          and performed a full heuristic evaluation of the current product. We also
+          benchmarked against 8 competing fintech applications to identify industry norms
+          and opportunity space.
+        </p>
+        <p>
+          Three themes emerged clearly: users feared making irreversible mistakes with
+          real money; information overload was the top complaint in free-text responses;
+          and the absence of clear visual feedback created persistent anxiety throughout
+          the flow.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
+    <section class="cs-section container" aria-labelledby="cs-process">
+
+      <div class="cs-section-label">
+        <span class="label">03 · Process</span>
+        <h2 class="cs-section-heading" id="cs-process">From insight to solution</h2>
+      </div>
+
+      <ol class="cs-process" data-animate>
+        <li>
+          <strong>Define</strong> — Synthesised research into 3 persona archetypes and
+          a revised problem statement. Mapped the current journey to locate the exact
+          moments users were disengaging.
+        </li>
+        <li>
+          <strong>Ideate</strong> — 2-day design sprint with the cross-functional team.
+          Generated 40+ concepts, voted and narrowed to 3 directions for prototyping.
+        </li>
+        <li>
+          <strong>Prototype</strong> — Built three interactive prototypes in Figma.
+          Animated key micro-interactions in Principle to validate flow feel before
+          committing to high-fidelity.
+        </li>
+        <li>
+          <strong>Test</strong> — Moderated usability testing with 18 participants via
+          Maze. Three rounds of iteration. Final design validated with a 92% task
+          completion rate.
+        </li>
+      </ol>
+
+    </section>
+
+
+    <!-- SOLUTION IMAGE -->
+    <!--
+      Add your image at: ../images/cs-fintech-designs.jpg
+      Recommended: 2400 × 1350px
+    -->
+    <div class="container" data-animate>
+      <figure class="cs-figure has-placeholder">
+        <img
+          src="../images/cs-fintech-designs.jpg"
+          alt="Final designs — redesigned onboarding flow and dashboard"
+          class="ratio-wide"
+          loading="lazy"
+        >
+        <figcaption>Final designs — onboarding flow (left) and redesigned dashboard (right)</figcaption>
+      </figure>
+    </div>
+
+
+    <!-- SOLUTION -->
+    <section class="cs-section container" aria-labelledby="cs-solution">
+
+      <div class="cs-section-label">
+        <span class="label">04 · Solution</span>
+        <h2 class="cs-section-heading" id="cs-solution">Less friction, more trust</h2>
+      </div>
+
+      <div class="cs-body" data-animate>
+        <p>
+          The most impactful change was onboarding. We reduced the sign-up flow from
+          <strong>9 steps to 4</strong>, consolidating related fields and using progressive
+          disclosure to surface advanced options only when needed. A persistent progress
+          indicator — a first for FinVault — gave users a clear sense of how far they
+          had to go.
+        </p>
+        <p>
+          We rebuilt the information architecture from scratch, anchoring it to actual
+          usage data rather than business logic. The dashboard now surfaces what users
+          care about most — their balance trend, upcoming bills, and savings progress —
+          without requiring any navigation.
+        </p>
+        <p>
+          Visually, we introduced a calmer palette, increased whitespace throughout, and
+          replaced abstract financial jargon with plain language. Every destructive action
+          gained a confirmation step with clear consequence language. Small details,
+          significant trust impact.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- DETAIL IMAGES -->
+    <!--
+      Add your images at:
+        ../images/cs-fintech-detail-1.jpg
+        ../images/cs-fintech-detail-2.jpg
+    -->
+    <div class="container" data-animate>
+      <div class="cs-image-pair">
+        <figure>
+          <img
+            src="../images/cs-fintech-detail-1.jpg"
+            alt="Redesigned onboarding — account setup screen"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+        </figure>
+        <figure>
+          <img
+            src="../images/cs-fintech-detail-2.jpg"
+            alt="New dashboard with balance trend and spending overview"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          >
+        </figure>
+      </div>
+    </div>
+
+
+    <!-- RESULTS -->
+    <section class="cs-section container" aria-labelledby="cs-results">
+
+      <div class="cs-section-label">
+        <span class="label">05 · Results</span>
+        <h2 class="cs-section-heading" id="cs-results">Numbers that moved</h2>
+      </div>
+
+      <div class="cs-results" data-animate>
+        <div class="cs-result">
+          <p class="cs-result__value">+42%</p>
+          <p class="cs-result__label">Onboarding completion</p>
+        </div>
+        <div class="cs-result">
+          <p class="cs-result__value">+31%</p>
+          <p class="cs-result__label">Daily active users</p>
+        </div>
+        <div class="cs-result">
+          <p class="cs-result__value">67</p>
+          <p class="cs-result__label">NPS score (up from 23)</p>
+        </div>
+      </div>
+
+      <div class="cs-body" data-animate data-delay="100">
+        <p>
+          Results were measured over a 60-day period post-launch. The NPS jump — from
+          23 to 67 — reflected not just a usability improvement but a genuine shift in
+          user trust. The engineering team also saw a <strong>30% reduction in support
+          tickets</strong> related to account setup in the following quarter.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- CASE STUDY FOOTER NAV -->
+    <div class="container">
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="../index.html">← All work</a>
+        <a href="#">Next: E-commerce Experience →</a>
+      </nav>
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__copy">&copy; <span data-year></span> Jonas.</p>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="../index.html#work"    class="footer__link">Work</a>
+          <a href="../index.html#about"   class="footer__link">About</a>
+          <a href="../index.html#contact" class="footer__link">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/* ============================================================
+   JONAS · Portfolio — case-study.css
+   ============================================================ */
+
+/* === PAGE HEADER === */
+.cs-header {
+  padding-top: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 6rem);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  margin-bottom: 3rem;
+  transition: color 0.15s;
+}
+.back-link:hover { color: var(--c-text); }
+
+.cs-title {
+  font-size: clamp(3rem, 7vw, 8rem);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin-block: 1.25rem 2.5rem;
+  max-width: 18ch;
+}
+
+/* Meta row */
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.cs-meta dt {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-dim);
+  margin-bottom: 0.25rem;
+}
+
+.cs-meta dd {
+  font-size: 0.875rem;
+  color: var(--c-muted);
+  font-weight: 300;
+}
+
+/* === CONTENT SECTIONS === */
+.cs-section {
+  padding-block: clamp(3rem, 6vw, 6rem);
+  border-top: 1px solid var(--c-border);
+}
+
+.cs-section-label {
+  margin-bottom: 2rem;
+}
+
+.cs-section-heading {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-weight: 300;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-top: 1rem;
+}
+
+/* Body copy */
+.cs-body {
+  max-width: 68ch;
+  font-size: clamp(0.9375rem, 1.15vw, 1.0625rem);
+  line-height: 1.85;
+  color: var(--c-muted);
+}
+.cs-body p + p { margin-top: 1.25rem; }
+.cs-body strong { color: var(--c-text); font-weight: 400; }
+
+/* Pull quote */
+.cs-quote {
+  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+  font-weight: 300;
+  line-height: 1.4;
+  font-style: italic;
+  color: var(--c-text);
+  max-width: 50ch;
+  margin-block: 2.5rem;
+}
+
+/* === IMAGES === */
+figure.cs-figure {
+  margin-block: clamp(2rem, 4vw, 4rem);
+  background: #111112; /* shows when image is absent */
+}
+
+figure.cs-figure img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+figure.cs-figure img.ratio-cinema { aspect-ratio: 16 / 7; }
+figure.cs-figure img.ratio-wide   { aspect-ratio: 16 / 9; }
+figure.cs-figure img.ratio-std    { aspect-ratio: 4 / 3; }
+
+/* fallback height when img hidden */
+figure.cs-figure.has-placeholder { aspect-ratio: 16 / 9; }
+figure.cs-figure.has-placeholder img { display: none; }
+
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--c-dim);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+/* Two-column image pair */
+.cs-image-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-block: clamp(2rem, 4vw, 4rem);
+}
+
+.cs-image-pair figure {
+  background: #111112;
+  margin: 0;
+}
+
+.cs-image-pair img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* === PROCESS === */
+.cs-process {
+  margin-block: 2rem;
+  counter-reset: steps;
+}
+
+.cs-process li {
+  counter-increment: steps;
+  display: flex;
+  gap: 2rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--c-border);
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  line-height: 1.7;
+  color: var(--c-muted);
+}
+
+.cs-process li:last-child { border-bottom: 1px solid var(--c-border); }
+
+.cs-process li::before {
+  content: counter(steps, decimal-leading-zero);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--c-dim);
+  padding-top: 0.3em;
+  flex-shrink: 0;
+  min-width: 2rem;
+}
+
+.cs-process strong {
+  color: var(--c-text);
+  font-weight: 400;
+}
+
+/* === RESULTS === */
+.cs-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--c-border);
+  border: 1px solid var(--c-border);
+  margin-block: 2rem;
+}
+
+.cs-result {
+  background: var(--c-bg);
+  padding: 2rem 1.5rem;
+}
+
+.cs-result__value {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+  margin-bottom: 0.5rem;
+}
+
+.cs-result__label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+/* === BOTTOM NAVIGATION === */
+.cs-nav {
+  border-top: 1px solid var(--c-border);
+  padding-block: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+}
+
+.cs-nav a { transition: color 0.15s; }
+.cs-nav a:hover { color: var(--c-text); }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .cs-header {
+    padding-top: calc(4rem + clamp(3rem, 6vw, 6rem));
+  }
+
+  .cs-meta { gap: 1.5rem; }
+
+  .cs-results {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-image-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-nav { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
